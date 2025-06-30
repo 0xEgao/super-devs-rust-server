@@ -3,7 +3,7 @@ use solana_program::{instruction::Instruction, pubkey::Pubkey};
 use solana_sdk::signature::Keypair;
 use std::str::FromStr;
 
-use crate::models::{AccountInfo, InstructionData};
+use crate::dtos::{AccountInfo, InstructionData};
 
 pub fn parse_pubkey(key_str: &str) -> Result<Pubkey, String> {
     Pubkey::from_str(key_str).map_err(|_| format!("Invalid public key: {}", key_str))
